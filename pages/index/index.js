@@ -77,5 +77,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  loginOut:function(e){
+    app.globalData.userInfo = null;
+    wx.navigateTo({
+      url: '../login/index'
+    })
   }
 })
