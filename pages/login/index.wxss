@@ -1,0 +1,94 @@
+/* pages/login/index.wxss */
+.login-page{
+	width: 750rpx;
+	min-height: 1200rpx;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.login-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.login-logo{
+	width: 669rpx;
+	height: 530rpx;
+	position: absolute;
+	left: 44%;
+	margin-left: -334.5rpx;
+	top: 160rpx;
+	pointer-events: none;
+}
+.login-logo image{
+	width: 100%;
+	height: 100%;
+	animation: zoomIn .8s .2s both;
+}
+.login-logo .star{
+	width: 80rpx;
+	position: absolute;
+	animation: starTwinkle 1s infinite linear;
+}
+.login-logo .star:before{
+	content: '';
+	width: 100%;
+	padding-top: 100%;
+	background: url() center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	animation: starGlow 1.5s infinite linear;
+	display: block;
+}
+.login-form{
+	width: 600rpx;
+	position: absolute;
+	left: 50%;
+	margin-left: -300rpx;
+	bottom: 100rpx;
+}
+.login-form .item{
+	border-bottom: #182a5a solid 1rpx;
+	padding-top: 40rpx;
+	padding-left: 80rpx;
+	position: relative;
+}
+.login-form .item image{
+	width: 50rpx;
+	height: 50rpx;
+	position: absolute;
+	left: 20rpx;
+	top: 50rpx;
+}
+.login-form .item input{
+	color: #182a5a;
+	font-size: 36rpx;
+	width: 100%;
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.login-form .item input.alpha{
+	opacity: .3;
+	filter: alpha(opacity = 30);
+}
+.login-form .forgot{
+	font-size: 26rpx;
+	color: #182a5a;
+	width: 200rpx;
+	line-height: 80rpx;
+	text-align: center;
+	margin-left: 400rpx;
+}
+.login-form .button{
+	font-size: 40rpx;
+	color: #fff;
+	height: 94rpx;
+	line-height: 94rpx;
+	letter-spacing: 10rpx;
+	background: #f96a06;
+	border-radius: 12rpx;
+	margin-top: 60rpx;
+	text-align: center;
+}

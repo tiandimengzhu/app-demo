@@ -1,0 +1,21 @@
+<view class="login-page">
+	<image mode="aspectFill" src="../imgs/login.jpg" class="login-bg" />
+	<view class="login-logo">
+    <!--头部可以放一个logo  -->
+    <image mode="aspectFill" src=""/>
+		<view class="star" wx:for="{{effect}}" wx:key="item" style="left: {{item.x}}%; top: {{item.y}}%; transform: scale({{item.scale}}) rotate({{item.rotate}}deg);" />
+	</view>
+	<view class="login-form">
+		<view class="item">
+			<image mode="aspectFill" src="../imgs/icon_login_name.png" />
+			<input type="text" maxlength="{{12}}" bindinput="inputNameHandler" focus="{{nameFocus}}" placeholder="{{inputName?'':'请输入用户名'}}" placeholder-style="color: #ffe397;" />
+		</view>
+		<view class="item">
+			<image mode="aspectFill" src="../imgs/icon_login_pwd.png" />
+			<input type="password" maxlength="{{12}}" bindinput="inputPwdHandler" bindconfirm="login" focus="{{passFocus}}" placeholder="{{inputPassword?'':'请输入密码'}}" placeholder-style="color: #ffe397;" />
+		</view>
+		<view class="forgot" bindtap="forgotHandler">忘记密码</view>
+		<view class="button" bindtap="login">登录</view>
+	</view>
+	<oauth wx:if="{{oauthHTMLVisible}}" env="{{oauthENV}}" bindchange="oauthHandler" />
+</view>
